@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {  SearchComponent } from '../search/search.component';
 import {  MoviecardComponent } from '../moviecard/moviecard.component';
 import { GetAPIListService } from '../services/get-apilist.service';
+import { HeaderComponent } from '../header/header.component';
 import { log } from 'console';
 
 
@@ -9,7 +10,7 @@ import { log } from 'console';
 @Component({
   selector: 'app-movieslist',
   standalone: true,
-  imports: [SearchComponent ,MoviecardComponent],
+  imports: [SearchComponent ,MoviecardComponent,HeaderComponent],
   templateUrl: './movieslist.component.html',
   styleUrl: './movieslist.component.css'
 })
