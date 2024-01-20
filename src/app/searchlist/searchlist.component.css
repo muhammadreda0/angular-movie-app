@@ -6,14 +6,6 @@
     -o-user-select: none;
     user-select: none;
 }
-.movie_card{
-    padding: 0 !important;
-    width: 22rem;
-    /* height: 25rem; */
-    margin:14px; 
-    border-radius: 10px;   
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
-}
 img {
       -webkit-user-drag: none;
       -moz-user-drag: none;
@@ -31,6 +23,14 @@ img {
     border-radius: 10px;
 
 }
+.movie_card{
+    padding: 0 !important;
+    width: 22rem;
+    /* height: 25rem; */
+    margin:14px; 
+    border-radius: 10px;   
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
 .movie_info{
     color: #5e5c5c;
 }
@@ -40,7 +40,7 @@ img {
 }
 .card-title{
     width: 80%;
-    height: 2rem;
+    height: 1rem;
     margin-top:2.7rem;
 }
 
@@ -87,27 +87,3 @@ img {
         background: #000;
     
 }
-/* <div class="card__rating">
-8.2
-</div> */
-/* .card__rating {
-    display: inline-block;
-    position: relative;
-    padding: 1rem;
-    margin-left: 3rem;
-    color: #fff;
-    border-radius: 50%;
-    border: 3px solid $color-primary;
-    
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      top: -5px;
-      left:0;
-      width: 50%;
-      height: 20px;
-      background: #000;
-    }
-  }
-   */
