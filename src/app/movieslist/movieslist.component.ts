@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {  SearchComponent } from '../search/search.component';
 import {  MoviecardComponent } from '../moviecard/moviecard.component';
 import { GetAPIListService } from '../services/get-apilist.service';
 import { HeaderComponent } from '../header/header.component';
 import { log } from 'console';
-
-
+import { ToggleWatchListService } from '../services/toggle-wath-list.service';
 
 @Component({
   selector: 'app-movieslist',
@@ -21,6 +20,10 @@ constructor(private getapilistservices : GetAPIListService){}
 
 ngOnInit(){
   this.getapilistservices.getData().subscribe((results :any )  => this.movies = results.results );
+}
+@HostListener('click')name(){
+  this.getapilistservices.getData().subscribe((results :any )  => this.movies = results.results );
+
 }
 }
 // 

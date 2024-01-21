@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import {  SearchComponent } from './search/search.component';
 import {  MovieslistComponent } from './movieslist/movieslist.component';
 import {  NavComponent } from './nav/nav.component';
@@ -14,5 +14,8 @@ import {  NavComponent } from './nav/nav.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(private router: Router) {
+ 
+}
   title = 'Angular-Movie-App';
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GetAPIListService } from '../services/get-apilist.service';
-
+GetAPIListService
 @Component({
   selector: 'app-search',
   standalone: true,
