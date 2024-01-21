@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WatclistComponent } from './watclist.component';
+import { SearchlistComponent } from './searchlist.component';
 
-describe('WatclistComponent', () => {
-  let component: WatclistComponent;
-  let fixture: ComponentFixture<WatclistComponent>;
+describe('SearchlistComponent', () => {
+  let component: SearchlistComponent;
+  let fixture: ComponentFixture<SearchlistComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WatclistComponent]
+      imports: [SearchlistComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(WatclistComponent);
+    fixture = TestBed.createComponent(SearchlistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

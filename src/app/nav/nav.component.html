@@ -1,14 +1,14 @@
 <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-10 ">
+
     <div class="container-fluid">
-      <a class="navbar-brand text-danger" href="#">Movie App</a>
+      <a class="navbar-brand  text-danger" href="#">Movie App</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-danger d-flex justify-content-end" id="navbarNav">
-        <input type="text" name="" class="form-control" id="">
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-danger">Home</a>
+            <a class="nav-link text-danger" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-danger" href="#">Features</a>
@@ -25,10 +25,8 @@
   <div class="navbar bg-dark navbar-dark text-white navbar-expand-md px-3">
     <a routerLink="/" class="navbar-brand ">Home</a>
     <div class="w-50">
-      <div class="input-icons position-relative">
-        <i class="fa-solid fa-magnifying-glass position-absolute translate-bottom mt-2 ms-2 ps-1  text-secondary"></i>
-        <input class="form-control" id="searchInput" type="text" />
-      </div>
+      <app-search></app-search>
+
   
     </div>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
