@@ -10,10 +10,10 @@
       <div class="card__rating">
           {{movie.vote_average | percentage}}
           </div>
-      <h5 class="card-title">{{movie.title}}</h5>
+      <h5 class="card-title  ">{{movie.title}}</h5>
             <div class="row flex-nowrap ">
               <span class="col-10 movie_info">{{movie.release_date}}</span>
-              <i id="cardHeart" (click)="addToWatchList(movie.id)"  class="fa fa-heart col-2 text-success "></i>
+              <i id="cardHeart" (click)="addToWatchList(movie.id)"  class="fa fa-heart col-2 text-warning   fs-4 "></i>
             </div>
              <!-- <span class="movie_info float-right"><i class="fas fa-star"></i> 9 / 10</span> -->
 

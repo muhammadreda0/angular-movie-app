@@ -6,13 +6,14 @@ import {
   import { MoviecardComponent } from "../moviecard/moviecard.component";
   import { GetAPIListService } from "../services/get-apilist.service";
 import { forkJoin } from "rxjs";
+import { CommonModule } from "@angular/common";
   
   @Component({
     selector: "app-watchlist",
     standalone: true,
     templateUrl: "./watchlist.component.html",
     styleUrl: "./watchlist.component.css",
-    imports: [MoviecardComponent],
+    imports: [MoviecardComponent,CommonModule],
   })
   export class WatchlistComponent implements OnInit {
     movies!: any;
@@ -36,68 +37,67 @@ import { forkJoin } from "rxjs";
       //       console.log(this.moviess)
       //     }
       //   });
-
+      this.getapilistservices
+      .getData()
+      .subscribe((results: any) => {
+        this.movies = results.results;
 
         const watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
-        
         if (watchList.length > 0) {
-          let observables: any[] = [];
-        
-          watchList.forEach((movieId: any) => {
-            observables.push(this.getapilistservices.getDataDetails(movieId));
-          });
-        
-          forkJoin(observables).subscribe((movieDetails: any[]) => {
-            this.moviess = movieDetails;
-            console.log(this.moviess);
-          });
+          this.moviess = this.movies.filter((movie: { id: number }) =>
+            watchList.includes(movie.id)
+          );
         }
+      });
+      
+        // const watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
         
-
-
-
-
-
-
-
-
-
+        // if (watchList.length > 0) {
+        //   let observables: any[] = [];
+        
+        //   watchList.forEach((movieId: any) => {
+        //     observables.push(this.getapilistservices.getDataDetails(movieId));
+        //   });
+        
+        //   forkJoin(observables).subscribe((movieDetails: any[]) => {
+        //     this.moviess = movieDetails;
+        //     console.log(this.moviess);
+        //   });
+        // }
+        
 
     }
-    @HostListener("click") show() {
-      // this.getapilistservices
-      //   .getData()
-      //   .subscribe((results: any) => (this.movies1 = results.results));
-        
-        // this.getapilistservices
-        // .getDataDetails()
-        // .subscribe((results: any) => (this.movies2 = results.results));
-        
-        // this.getapilistservices
-        // .getDatarecommend()
-        // .subscribe((results: any) => (this.movies3 = results.results));
-        // this.getapilistservices
-        // .searchMovie()
-        // .subscribe((results: any) => (this.movies4 = results.results));
-
+      @HostListener("click") show() {
+        this.getapilistservices
+          .getData()
+          .subscribe((results: any) => (this.movies = results.results));
         const watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
-        
-        if (watchList.length > 0) {
-          let observables: any[] = [];
-        
-          watchList.forEach((movieId: any) => {
-            observables.push(this.getapilistservices.getDataDetails(movieId));
-          });
-        
-          forkJoin(observables).subscribe((movieDetails: any[]) => {
-            this.moviess = movieDetails;
-            console.log(this.moviess);
-          });
+        if (watchList !== "[]") {
+          this.moviess = this.movies.filter((movie: { id: number }) =>
+            watchList.includes(movie.id)
+          );
         }
+        
+      }
+
+        // const watchList = JSON.parse(localStorage.getItem("watchList") || "[]");
+        
+        // if (watchList.length > 0) {
+        //   let observables: any[] = [];
+        
+        //   watchList.forEach((movieId: any) => {
+        //     observables.push(this.getapilistservices.getDataDetails(movieId));
+        //   });
+        
+        //   forkJoin(observables).subscribe((movieDetails: any[]) => {
+        //     this.moviess = movieDetails;
+        //     console.log(this.moviess);
+        //   });
+        // }
         
 
     }
   
-      }
+      
     
   
