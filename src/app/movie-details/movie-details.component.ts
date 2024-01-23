@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RecommendedComponent } from "../recommended/recommended.component";
 import { ActivatedRoute } from '@angular/router';
 import { MovieServiceService } from '../services/movie-service.service';
@@ -12,9 +12,9 @@ import { ElementRef } from '@angular/core';
     styleUrl: './movie-details.component.css',
     imports: [CommonModule, RecommendedComponent]
 })
-export class MovieDetailsComponent implements OnInit ,OnChanges{
+export class MovieDetailsComponent implements OnInit {
     public toggleClass() {
-        // Get the element by its ID
+        // this will change mode
         const elementDark = this.el.nativeElement.querySelector('#dark');
         const elementLight = this.el.nativeElement.querySelector('#light');
         const modeButtonIcon = this.el.nativeElement.querySelector('#modeButtonIcon');
@@ -59,14 +59,14 @@ export class MovieDetailsComponent implements OnInit ,OnChanges{
         private moviesService: MovieServiceService,
         private el: ElementRef
     ) { }
-  ngOnChanges(): void {
-    this.baseurl = this.moviesService.getbaseurl();
-    this.id = this.activatedRoute.snapshot.params['id'];
-    this.moviesService
-        .getMovieDetaild(this.id)
-        .subscribe((response: any) => (this.movie = response));
+//   ngOnChanges(): void {
+//     this.baseurl = this.moviesService.getbaseurl();
+//     this.id = this.activatedRoute.snapshot.params['id'];
+//     this.moviesService
+//         .getMovieDetaild(this.id)
+//         .subscribe((response: any) => (this.movie = response));
 
-  }
+//   }
   
 
 
@@ -76,7 +76,14 @@ export class MovieDetailsComponent implements OnInit ,OnChanges{
         this.moviesService
             .getMovieDetaild(this.id)
             .subscribe((response: any) => (this.movie = response));
-
     }
+    @HostListener('click')redirectToDetails() {
+        this.baseurl = this.moviesService.getbaseurl();
+        this.id = this.activatedRoute.snapshot.params['id'];
+        this.moviesService
+            .getMovieDetaild(this.id)
+            .subscribe((response: any) => (this.movie = response));
+    }
+
     
 } 

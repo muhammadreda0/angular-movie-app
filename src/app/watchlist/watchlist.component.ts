@@ -34,7 +34,6 @@ import { CommonModule } from "@angular/common";
       //       this.moviess = this.movies.filter((movie: { id: number }) =>
       //         watchList.includes(movie.id)
       //       );
-      //       console.log(this.moviess)
       //     }
       //   });
       this.getapilistservices
