@@ -4,13 +4,14 @@ import { RecommendedComponent } from "../recommended/recommended.component";
 import { ActivatedRoute } from '@angular/router';
 import { MovieServiceService } from '../services/movie-service.service';
 import { ElementRef } from '@angular/core';
+import { NgbdRatingDecimal } from "../rating/rating.component";
 
 @Component({
     selector: 'app-movie-details',
     standalone: true,
     templateUrl: './movie-details.component.html',
     styleUrl: './movie-details.component.css',
-    imports: [CommonModule, RecommendedComponent]
+    imports: [CommonModule, RecommendedComponent, NgbdRatingDecimal]
 })
 export class MovieDetailsComponent implements OnInit {
 isReadonly: any;
