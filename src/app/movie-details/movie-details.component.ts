@@ -13,6 +13,8 @@ import { ElementRef } from '@angular/core';
     imports: [CommonModule, RecommendedComponent]
 })
 export class MovieDetailsComponent implements OnInit {
+isReadonly: any;
+rate: any;
     public toggleClass() {
         // this will change mode
         const elementDark = this.el.nativeElement.querySelector('#dark');
