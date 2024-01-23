@@ -23,7 +23,7 @@
 
 
 
-				<ul class="postcard__tagbox mb-3">
+				@if(movie.genres[0].name){<ul class="postcard__tagbox mb-3">
 					@if(movie.genres[0].name){<li class="tag__item"><i
 							class="fas fa-tag mr-2"></i>{{movie.genres[0].name}}</li>}
 					@if(movie.genres[1].name){<li class="tag__item"><i
@@ -36,7 +36,7 @@
 					<li class="tag__item play blue">
 						<a href="#"><i class="fas fa-play mr-2"></i>Play movie</a>
 					</li>
-				</ul>
+				</ul>}
 
 				<ngbd-rating-decimal [rating]="movie.vote_average"></ngbd-rating-decimal>
 				
