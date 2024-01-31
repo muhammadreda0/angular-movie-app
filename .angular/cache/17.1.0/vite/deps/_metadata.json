@@ -1,0 +1,67 @@
+{
+  "hash": "13001b2f",
+  "configHash": "56eb9390",
+  "lockfileHash": "7fab2ac0",
+  "browserHash": "2b3eaada",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "85604b73",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "a1ba8824",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "7e0bab8d",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "80211982",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "b7d15b4b",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "158d0cb7",
+      "needsInterop": false
+    },
+    "@ng-bootstrap/ng-bootstrap": {
+      "src": "../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
+      "file": "@ng-bootstrap_ng-bootstrap.js",
+      "fileHash": "0e204b8c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-SX2WMB6F": {
+      "file": "chunk-SX2WMB6F.js"
+    },
+    "chunk-4ZFMLW3V": {
+      "file": "chunk-4ZFMLW3V.js"
+    },
+    "chunk-A33NAIJA": {
+      "file": "chunk-A33NAIJA.js"
+    },
+    "chunk-K2P5XSIQ": {
+      "file": "chunk-K2P5XSIQ.js"
+    },
+    "chunk-DFJUDO25": {
+      "file": "chunk-DFJUDO25.js"
+    }
+  }
+}
